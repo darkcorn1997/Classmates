@@ -5,10 +5,6 @@ import corn.ironman.jay.bean.Friend;
 import java.util.List;
 
 public interface FriendService extends BaseService<Friend, Integer> {
-    
-    //设置baseMapper
-    @Override
-    void setBaseMapper();
 
     //添加好友信息
     @Override

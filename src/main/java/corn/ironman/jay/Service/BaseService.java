@@ -20,11 +20,11 @@ public interface BaseService<T, ID> extends Serializable {
 
     List<T> selectBySelective(T t);
 
+    int updateByPrimaryKey(T t);
+
     int updateByPrimaryKeySelective(T t);
 
     int updateByPrimaryKeyWithBLOBs(T t);
-
-    int updateByPrimaryKey(T t);
 
     int deleteByPrimaryKey(ID[] ids);
 
