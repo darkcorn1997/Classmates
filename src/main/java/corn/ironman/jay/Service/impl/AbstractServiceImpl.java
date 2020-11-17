@@ -60,7 +60,7 @@ public abstract class AbstractServiceImpl<T, ID> implements BaseService<T, ID>, 
 
     @Override
     public PageInfo<T> selectForPage(T t, BaseConditionVO baseConditionVO) {
-        PageHelper.startPage(baseConditionVO.getPageNum(), baseConditionVO.getPageSize()); //设置每夜的记录数
+        PageHelper.startPage(baseConditionVO.getPage(), baseConditionVO.getRows()); //设置每页的记录数
         List<T> list = baseMapper.selectBySelective(t); //获取列表信息
         return new PageInfo<>(list);
     }

@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional
+@Transactional // ？
 public class FriendServiceImpl extends AbstractServiceImpl<Friend, Integer> implements FriendService {
 
     @Autowired

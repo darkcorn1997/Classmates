@@ -9,7 +9,7 @@ public class Friend {
     private char gender;
     private String qq;
     private String email;
-    private String phone;
+    private String telephone;
     private String address;
     private String portrait_path; //头像路径
 
@@ -36,8 +36,8 @@ public class Friend {
         return email;
     }
 
-    public String getPhone() {
-        return phone;
+    public String getTelephone() {
+        return telephone;
     }
 
     public String getAddress() {
@@ -68,8 +68,8 @@ public class Friend {
         this.email = email;
     }
 
-    public void setPhone(String phone) {
-        this.phone = phone;
+    public void setTelephone(String telephone) {
+        this.telephone = telephone;
     }
 
     public void setAddress(String address) {

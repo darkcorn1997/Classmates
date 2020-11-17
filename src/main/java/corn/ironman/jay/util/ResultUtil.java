@@ -39,8 +39,8 @@ public class ResultUtil {
         return new ResponseResult().successWithPath(path);
     }
 
-    public static PageResult tablePage(Long total, List<?> list) {
-        return new PageResult(total, list);
+    public static PageResult tablePage(Long total, List<?> rows) {
+        return new PageResult(total, rows);
     }
 
     public static <T> PageResult tablePage(PageInfo<T> pageInfo) {

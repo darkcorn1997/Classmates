@@ -3,9 +3,9 @@
 <mapper namespace="corn.ironman.jay.dao.FriendMapper">
 
     <!--添加好友信息-->
-    <insert id="insertSelective">
-        INSERT INTO FRIEND(name, gender, qq, email, phone, address, portrait_path)
-        values (#{name}, #{gender}, #{qq}, #{email}, #{phone}, #{address}, #{portrait_path})
+    <insert id="insertBySelective">
+        INSERT INTO FRIEND(name, gender, qq, email, telephone, address, portrait_path)
+        values (#{name}, #{gender}, #{qq}, #{email}, #{telephone}, #{address}, #{portrait_path})
     </insert>
 
     <!--选择性查询好友信息：根据姓名模糊查询指定/所有好友 信息列表-->
@@ -26,7 +26,7 @@
             <if test="gender!=null and gender!=''">gender=#{gender},</if>
             <if test="qq!=null and qq!=''">qq=#{qq},</if>
             <if test="email!=null and email!=''">email=#{email},</if>
-            <if test="phone!=null and phone!=''">phone=#{phone},</if>
+            <if test="telephone!=null and telephone!=''">telephone=#{telephone},</if>
             <if test="address!=null and address!=''">address=#{address},</if>
             <if test="portrait_path!=null and portrait_path!=''">portrait_path=#{portrait_path}</if>
         </set>

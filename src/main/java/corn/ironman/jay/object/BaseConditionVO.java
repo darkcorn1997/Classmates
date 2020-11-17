@@ -4,27 +4,27 @@ package corn.ironman.jay.object;
 /**基础值对象(basic value Object)**/
 
 public class BaseConditionVO {
-    private int pageNum; //当前页码
-    private int pageSize; //当前页码行数
+    private int page; //当前页码
+    private int rows; //当前页码行数
 
-    public BaseConditionVO(int pageNum, int pageSize) {
-        this.pageNum = pageNum;
-        this.pageSize = pageSize;
+    public BaseConditionVO(int page, int rows) {
+        this.page = page;
+        this.rows = rows;
     }
 
-    public int getPageNum() {
-        return pageNum;
+    public int getPage() {
+        return page;
     }
 
-    public int getPageSize() {
-        return pageSize;
+    public int getRows() {
+        return rows;
     }
 
-    public void setPageNum(int pageNum) {
-        this.pageNum = pageNum;
+    public void setPage(int page) {
+        this.page = page;
     }
 
-    public void setPageSize(int pageSize) {
-        this.pageSize = pageSize;
+    public void setRows(int rows) {
+        this.rows = rows;
     }
 }

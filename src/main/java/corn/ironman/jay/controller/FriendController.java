@@ -42,12 +42,12 @@ public class FriendController {
      * @param: username 好友姓名
      * @return: PageResult
      */
-    @PostMapping("/getFriendListView")
+    @PostMapping("/getFriendList")
     @ResponseBody
-    public PageResult getFriendList(String username, Integer pageNum, Integer pageSize) {
+    public PageResult getFriendList(String username, Integer page, Integer rows) {
         // 获取封装查询结果
         PageInfo<Friend> pageInfo = friendService.selectForPage(new Friend(username),
-                new BaseConditionVO(pageNum, pageSize));
+                new BaseConditionVO(page, rows));
         // 返回分页数据
         return ResultUtil.tablePage(pageInfo);
     }
