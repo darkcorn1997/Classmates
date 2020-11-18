@@ -3,7 +3,8 @@ package corn.ironman.jay.object;
 
 import java.util.List;
 
-/**分页结果**/
+
+/**封装统一的分页结果返回格式**/
 public class PageResult {
     private Long total;
     private List<?> rows;

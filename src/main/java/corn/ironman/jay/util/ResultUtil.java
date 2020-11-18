@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Map;
 
 
-/**结果映射到ResponseResult 和 PageResult**/
+/**工具类 返回结果统一格式处理**/
 public class ResultUtil {
 
     public static ModelAndView view(String view) {return new ModelAndView(view);}
@@ -45,7 +45,7 @@ public class ResultUtil {
 
     public static <T> PageResult tablePage(PageInfo<T> pageInfo) {
         if (pageInfo == null) {
-            return new PageResult(0L, new ArrayList<>());
+            return new PageResult(0L, new ArrayList<>()); //表示长整形0
         }
         return tablePage(pageInfo.getTotal(), pageInfo.getList());
     }

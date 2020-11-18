@@ -4,8 +4,8 @@ package corn.ironman.jay.object;
 import java.util.HashMap;
 import java.util.Map;
 
-/**页面响应结果**/
 
+/**封装统一的页面响应结果返回格式**/
 public class ResponseResult {
     private final boolean SUCCESS_STATUS = true;
     private final Map<String, Object> response = new HashMap<>();
