@@ -12,7 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-@Transactional // ？
+@Transactional // 啥玩意？
 public class FriendServiceImpl extends AbstractServiceImpl<Friend, Integer> implements FriendService {
 
     @Autowired
@@ -21,7 +21,6 @@ public class FriendServiceImpl extends AbstractServiceImpl<Friend, Integer> impl
     //the method must be implemented
     //注:这句必须要加上,不然会报空指针异常,因为在实际掉用的时候不是BaseMapper调用,而是friendMapper
     @Autowired
-    @Override
     public void setBaseMapper() {
         super.setBaseMapper(friendMapper);
     }

@@ -1,10 +1,15 @@
 package corn.ironman.jay.Service;
 
+import com.github.pagehelper.PageInfo;
 import corn.ironman.jay.bean.Friend;
+import corn.ironman.jay.object.BaseConditionVO;
 
 import java.util.List;
 
 public interface FriendService extends BaseService<Friend, Integer> {
+
+    @Override
+    void setBaseMapper();
 
     //添加好友信息
     @Override
@@ -21,4 +26,7 @@ public interface FriendService extends BaseService<Friend, Integer> {
     //删除好友信息
     @Override
     int deleteByPrimaryKey(Integer[] ids);
+
+    @Override
+    PageInfo<Friend> selectForPage(Friend friend, BaseConditionVO baseConditionVO);
 }

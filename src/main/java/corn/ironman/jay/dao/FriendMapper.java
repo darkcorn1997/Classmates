@@ -23,5 +23,5 @@ public interface FriendMapper extends BaseMapper<Friend, Integer> {
 
     //删除好友信息
     @Override
-    int deleteByPrimaryKey(Integer[] id);
+    int deleteByPrimaryKey(Integer[] ids);
 }
