@@ -27,6 +27,7 @@ public interface FriendService extends BaseService<Friend, Integer> {
     @Override
     int deleteByPrimaryKey(Integer[] ids);
 
+    //分页查询
     @Override
     PageInfo<Friend> selectForPage(Friend friend, BaseConditionVO baseConditionVO);
 }
