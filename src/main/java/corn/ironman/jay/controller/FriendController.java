@@ -19,6 +19,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
@@ -97,10 +98,10 @@ public class FriendController {
 
     @PostMapping("/uploadPhoto")
     @ResponseBody
-    public Map<String, Object> uploadPhoto(MultipartFile photo) throws FileNotFoundException {
+    public Map<String, Object> uploadPhoto(MultipartFile photo) throws FileNotFoundException, UnsupportedEncodingException {
         //指定存储头像目录的完整路径(项目发布路径): 若不使用绝对路径,则Spring boot会默认将上传的文件存储到临时目录中
         var dirPath = URLDecoder.decode(ResourceUtils.getURL("classpath:").getPath(),
-                StandardCharsets.UTF_8) + FileUtil.uploadPath;
+                String.valueOf(StandardCharsets.UTF_8)) + FileUtil.uploadPath;
         //返回头像的上传结果
         return FileUtil.getUploadResult(photo, dirPath, FileUtil.uploadPath);
     }
